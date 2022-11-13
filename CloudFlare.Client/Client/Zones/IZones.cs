@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using CloudFlare.Client.Api.Display;
 using CloudFlare.Client.Api.Result;
 using CloudFlare.Client.Api.Zones;
+using CloudFlare.Client.Api.Zones.Settings;
 
 namespace CloudFlare.Client.Client.Zones
 {
@@ -35,6 +36,7 @@ namespace CloudFlare.Client.Client.Zones
         /// </summary>
         /// <value>The implementation of the firewall rules interaction</value>
         public IFirewallRules FirewallRules { get; }
+        public ISettings Settings { get; }
 
         /// <summary>
         /// Create a new zone
@@ -93,6 +95,6 @@ namespace CloudFlare.Client.Client.Zones
         /// <param name="modifiedZone">The modified zone values</param>
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>The updated zone</returns>
-        Task<CloudFlareResult<Zone>> UpdateAsync(string zoneId, ModifiedZone modifiedZone, CancellationToken cancellationToken = default);
+        Task<CloudFlareResult<Zone>> UpdateAsync(string zoneId, ModifiedZone modifiedZone, CancellationToken cancellationToken = default); 
     }
 }
