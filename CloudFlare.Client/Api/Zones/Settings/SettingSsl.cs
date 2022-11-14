@@ -16,10 +16,10 @@ namespace CloudFlare.Client.Api.Zones.Settings
         public string CertificateStatus { get; set; }
 
         [JsonProperty("modified_on")]
-        public DateTime ModifiedOn { get; set; }
+        public DateTime? ModifiedOn { get; set; }
 
         [JsonProperty("validation_errors")]
-        public string[] ValidationErrors { get; set; }
+        public object[] ValidationErrors { get; set; }
 
         [JsonProperty("editable")]
         public bool Editable { get; set; }
